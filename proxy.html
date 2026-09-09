@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>proxy</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  #pframe { width:100%; height:70vh; border:1px solid #999; background:#fff; }
+  .fatias { margin-top:6px; }
+  .fatias button { margin:2px; padding:4px 8px; }
+  #proxywrap { display:none; margin:10px 0; }
+  label { margin-right:10px; font-size:13px; }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>proxy</h1>
+  <nav>
+    <a href="index.html">jogos</a>
+    <a href="#" class="panic" id="panic">sair</a>
+  </nav>
+</div>
+
+<div class="wrap">
+  <p>escreve um site e abre aqui dentro. se o site bloquear embed direto, usa o modo traduzir.</p>
+
+  <form id="pf">
+    <input type="text" id="purl" placeholder="https://exemplo.com" size="40" autocomplete="off">
+    <select id="pmode">
+      <option value="direct">direto</option>
+      <option value="translate" selected>traduzir</option>
+      <option value="cors">corsproxy</option>
+    </select>
+    <button type="submit">abrir</button>
+    <button type="button" id="pblank">abrir em aba</button>
+  </form>
+
+  <div class="fatias" id="fatias"></div>
+
+  <div id="proxywrap">
+    <iframe id="pframe"></iframe>
+  </div>
+
+  <div class="foot">
+    <p class="bill">alguns sites simplesmente nao deixam ser embutidos. aí testo o modo traduzir.</p>
+  </div>
+</div>
+
+<script src="js/proxy.js"></script>
+</body>
+</html>
